@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import cn.dagebo.andlib.GYDBBaseManager;
 import liu.hebtu.cn.gydblibsample.R;
-import liu.hebtu.cn.gydblibsample.gydb.GYDBBaseManager;
 
 public class HomeActivity extends AppCompatActivity {
 

@@ -1,6 +1,4 @@
-package liu.hebtu.cn.gydblibsample.gydb;
-
-import android.util.Log;
+package cn.dagebo.andlib;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

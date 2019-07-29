@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GYDBLibSample.iml" filepath="$PROJECT_DIR$/GYDBLibSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andlib/andlib.iml" filepath="$PROJECT_DIR$/andlib/andlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

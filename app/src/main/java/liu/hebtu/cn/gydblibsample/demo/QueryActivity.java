@@ -18,8 +18,8 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.dagebo.andlib.GYDBOprator;
 import liu.hebtu.cn.gydblibsample.R;
-import liu.hebtu.cn.gydblibsample.gydb.GYDBOprator;
 
 public class QueryActivity extends AppCompatActivity {
 

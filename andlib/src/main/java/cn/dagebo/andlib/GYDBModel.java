@@ -1,4 +1,4 @@
-package liu.hebtu.cn.gydblibsample.gydb;
+package cn.dagebo.andlib;
 
 /**
  * Author: liuguoyan
