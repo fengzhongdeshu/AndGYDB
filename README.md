@@ -49,11 +49,21 @@ BOOL bol =  [oprator update];
 
 ## Installation
 
-GYDB is available through [CocoaPods](https://cocoapods.org). To install
+GYDB is available through gradle . To install
 it, simply add the following line to your Podfile:
 
-```ruby
-pod 'GYDB', :git=>'https://github.com/fengzhongdeshu/GYDB.git'
+```gradle  
+Add it in your root build.gradle at the end of repositories:  
+allprojects {  
+		repositories {  
+			...  
+			maven { url 'https://jitpack.io' }  
+		}  
+	}  
+Add the dependency  
+dependencies {  
+	        implementation 'com.github.fengzhongdeshu:AndGYDB:Tag'  
+	}  
 ```
 
 ## Author
