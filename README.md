@@ -14,35 +14,45 @@ To run the example project, clone the repo, and run `pod install` from the Examp
  
 
 ##Usage##  
+**初始化**  
+在Application或者在使用lib前：  
+GYDBBaseManager.get().init(this.getApplicationContext());  
 
 **配置**  
-(1)调试模式:GYDBOption.debug = NO ;  
-(2)数据库名称:GYDBOption.dbName = @"demo.db" ;  
+(1)调试模式:GYDBConfig.debug = true ;  
+(2)数据库名称:GYDBConfig.dbName = "demo.db" ;  
 
 **保存**  
-GYUser *user = [[GYUser alloc]init] ;  
-BOOL bol = [[[GYDBOprator opratorWithModel:[GYUser class]]addSaveModel:user] save] ;
+User u = new User() ;  
+GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class);  
+oprator.addSaveModel(u) ;  
+List<Object> list = oprator.save() ;  
+if (list.size()==0){  
+      btn_add.setText("保存成功");  
+    }else {  
+      btn_add.setText("保存失败");  
+  }  
 
 **查询**    
-GYDBOprator *oprator = [GYDBOprator opratorWithModel:[GYUser class]] ;  
-[oprator whereColume:@"name" compare:@"=" value:@"张三"] ;  
-[oprator andWhereColume:@"age" compare:@"=" value:@"12"];  
-NSArray *arr =  [oprator query] ;  
+GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class) ;  
+oprator.where("name" , "=" , "张三") ;  
+oprator.andWhere("age" , ">" , "12") ;  
+List<Object> arr = oprator.query() ;  
 
 **删除**  
-GYDBOprator *oprator = [GYDBOprator opratorWithModel:[GYUser class]] ;  
-[oprator whereColume:@"name" compare:@"=" value:@"张三"] ;  
-[oprator andWhereColume:@"age" compare:@"=" value:@"12"];  
-NSArray *arr =  [oprator remove] ;  
+GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class) ;  
+oprator.where("name" , "=" , "张三") ;  
+oprator.andWhere("age" , ">" , "12") ;  
+boolean bol = oprator.remove() ;  
 
 **更新**  
-GYDBOprator *oprator = [GYDBOprator opratorWithModel:[GYUser class]] ;  
+GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class) ;  
 //设置要更新的字段和值  
-[oprator updateColume:@"age" toValue:@"18"] ;  
+oprator.updateColume("age","12") ;  
 //添加过滤条件  
-[oprator whereColume:@"name" compare:@"=" value:@"张三"] ;  
-[oprator andWhereColume:@"age" compare:@"=" value:@"12"];  
-BOOL bol =  [oprator update];  
+oprator.where("name" , "=" , "张三") ;  
+oprator.andWhere("age" , ">" , "12") ;  
+boolean bol = oprator.update();  
 
 
 ## Requirements
