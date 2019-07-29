@@ -60,7 +60,7 @@ boolean bol = oprator.update();
 ## Installation
 
 GYDB is available through gradle . To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your build.gradle:
 
 ```gradle  
 Add it in your root build.gradle at the end of repositories:  
