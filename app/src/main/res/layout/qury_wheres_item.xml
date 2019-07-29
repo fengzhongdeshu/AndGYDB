@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:hint="or,and"
+        android:gravity="center"
+        android:id="@+id/item_logic"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:hint="colume"
+        android:gravity="center"
+        android:id="@+id/item_colume"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/item_comp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:hint="value"
+        android:gravity="center"
+        android:id="@+id/item_value"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+
+</LinearLayout>

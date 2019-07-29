@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="liu.hebtu.cn.gydblibsample.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_wheres"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="50dp">
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_query"
+                    android:background="@android:color/holo_blue_dark"
+                    android:text="查询"
+                    android:textColor="@android:color/white"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp" />
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/btn_delete"
+                    android:background="@android:color/holo_red_dark"
+                    android:text="删除"
+                    android:textColor="@android:color/white"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp" />
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_edit"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="编辑"
+                    android:textColor="@android:color/white"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/text_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
