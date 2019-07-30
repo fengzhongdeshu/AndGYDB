@@ -1,4 +1,5 @@
-# AndGYDB
+AndGYDB
+=========================
 
 ![Image text](https://github.com/fengzhongdeshu/GYDB/blob/master/Image/gydb_03.png)
 ## Example
@@ -16,13 +17,18 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ##Usage##  
 **初始化**  
 在Application或者在使用lib前：  
+```java
 GYDBBaseManager.get().init(this.getApplicationContext());  
+```
 
 **配置**  
+```java
 (1)调试模式:GYDBConfig.debug = true ;  
 (2)数据库名称:GYDBConfig.dbName = "demo.db" ;  
+```
 
 **保存**  
+```java
 User u = new User() ;  
 GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class);  
 oprator.addSaveModel(u) ;  
@@ -32,20 +38,23 @@ if (list.size()==0){
     }else {  
       btn_add.setText("保存失败");  
   }  
-
+```
 **查询**    
+```java
 GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class) ;  
 oprator.where("name" , "=" , "张三") ;  
 oprator.andWhere("age" , ">" , "12") ;  
 List<Object> arr = oprator.query() ;  
-
+```
 **删除**  
+```java
 GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class) ;  
 oprator.where("name" , "=" , "张三") ;  
 oprator.andWhere("age" , ">" , "12") ;  
 boolean bol = oprator.remove() ;  
-
+```
 **更新**  
+```java
 GYDBOprator oprator = GYDBOprator.getInstance().initModel(User.class) ;  
 //设置要更新的字段和值  
 oprator.updateColume("age","12") ;  
@@ -53,27 +62,26 @@ oprator.updateColume("age","12") ;
 oprator.where("name" , "=" , "张三") ;  
 oprator.andWhere("age" , ">" , "12") ;  
 boolean bol = oprator.update();  
+```
 
-
-## Requirements
 
 ## Installation
 
 GYDB is available through gradle . To install
 it, simply add the following line to your build.gradle:
 
-```gradle  
-Add it in your root build.gradle at the end of repositories:  
-allprojects {  
-		repositories {  
-			...  
-			maven { url 'https://jitpack.io' }  
-		}  
-	}  
-Add the dependency  
-dependencies {  
-	        implementation 'com.github.fengzhongdeshu:AndGYDB:Tag'  
-	}  
+```
+Add it in your root build.gradle at the end of repositories:
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Add the dependency
+dependencies {
+	        implementation 'com.github.fengzhongdeshu:AndGYDB:0.3.0'
+	}
 ```
 
 ## Author
