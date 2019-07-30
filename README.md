@@ -4,7 +4,7 @@ AndGYDB
 ![Image text](https://github.com/fengzhongdeshu/GYDB/blob/master/Image/gydb_03.png)
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo.
 
 ## Document
 **框架特点:**  
