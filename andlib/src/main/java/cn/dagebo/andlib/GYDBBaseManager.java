@@ -101,10 +101,10 @@ public class GYDBBaseManager {
             log("param models can not be empty!!!");
             return null ;
         }
-        String sql = "SELECT * FROM CONTENTTABLE WHERE bus_id IN ( %s ) ORDER BY bus_id ASC " ;
+        String sql = "SELECT * FROM CONTENTTABLE WHERE  model = '%s' AND  bus_id IN ( %s ) ORDER BY bus_id ASC " ;
 
         String condition = getConditionsIds(models) ;
-        sql = String.format(sql , condition) ;
+        sql = String.format(sql , models.get(0).getModel(), condition) ;
 
         return getModelsByQuerySQL(sql) ;
     }
@@ -135,9 +135,9 @@ public class GYDBBaseManager {
             return false ;
         }
 
-        String sql = "DELETE FROM CONTENTTABLE WHERE bus_id IN ( %s ) " ;
+        String sql = "DELETE FROM CONTENTTABLE WHERE  model = '%s' AND  bus_id IN ( %s ) " ;
         String condition = getConditionsIds(models) ;
-        sql = String.format(sql , condition) ;
+        sql = String.format(sql ,models.get(0).getModel(), condition) ;
 
         return executeUpdate(sql) ;
     }
