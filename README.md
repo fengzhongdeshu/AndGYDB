@@ -88,7 +88,7 @@ allprojects {
 	}
 Add the dependency
 dependencies {
-	        implementation 'com.github.fengzhongdeshu:AndGYDB:0.3.0'
+	        implementation 'com.github.fengzhongdeshu:AndGYDB:0.3.2'
 	}
 ```
 
