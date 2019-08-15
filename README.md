@@ -65,7 +65,13 @@ oprator.where("name" , "=" , "张三") ;
 oprator.andWhere("age" , ">" , "12") ;  
 boolean bol = oprator.update();  
 ```
+## 版本更新日志
+```
+2019-8-15(tag:0.3.2)
+1:修改多数据对象实例查询和删除时，字段冲突问题。
 
+
+```
 
 ## Installation
 
